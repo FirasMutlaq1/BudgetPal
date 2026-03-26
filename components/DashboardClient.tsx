@@ -254,7 +254,7 @@ export default function DashboardClient({
                 <Area type="monotone" dataKey="expense" stroke="#ef4444" strokeWidth={2} fill="url(#gradExpense)" dot={false} />
                 <Tooltip
                   contentStyle={{ fontSize: 11, borderRadius: 8, border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
-                  formatter={(v: number, name: string) => [`${v.toLocaleString('sv-SE')} kr`, name === 'income' ? 'Inkomst' : 'Utgift']}
+                  formatter={(v: unknown, name: unknown) => [`${Number(v).toLocaleString('sv-SE')} kr`, name === 'income' ? 'Inkomst' : 'Utgift']}
                 />
               </AreaChart>
             </ResponsiveContainer>
