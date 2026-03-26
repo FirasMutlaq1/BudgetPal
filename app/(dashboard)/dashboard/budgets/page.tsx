@@ -41,9 +41,9 @@ export default async function BudgetsPage() {
   })
 
   return (
-    <div className="flex h-full overflow-hidden">
+    <div className="flex flex-col md:flex-row md:h-full md:overflow-hidden">
       {/* Left: budget list */}
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className="flex-1 p-4 md:p-6 md:overflow-y-auto">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-lg font-bold text-gray-900">Budgetar</h1>
           <span className="text-sm text-gray-600 capitalize">{monthLabel}</span>
@@ -98,7 +98,7 @@ export default async function BudgetsPage() {
       </div>
 
       {/* Right: form */}
-      <div className="w-72 shrink-0 border-l border-gray-100 p-6">
+      <div className="md:w-72 md:shrink-0 border-t md:border-t-0 md:border-l border-gray-100 p-4 md:p-6">
         <h2 className="text-sm font-semibold text-gray-900 mb-1">Sätt budget</h2>
         <p className="text-xs text-gray-600 mb-4 capitalize">{monthLabel}</p>
         <BudgetForm categories={categories ?? []} currentMonth={currentMonth} />

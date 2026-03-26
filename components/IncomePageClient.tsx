@@ -26,9 +26,9 @@ export default function IncomePageClient({
   const [editing, setEditing] = useState<Transaction | null>(null)
 
   return (
-    <div className="flex h-full overflow-hidden">
+    <div className="flex flex-col md:flex-row md:h-full md:overflow-hidden">
       {/* Left: income list */}
-      <div className="flex-1 overflow-y-auto p-6 min-w-0">
+      <div className="flex-1 p-4 md:p-6 md:overflow-y-auto min-w-0">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-lg font-bold text-gray-900">Inkomster</h1>
           <div className="bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full">
@@ -76,7 +76,7 @@ export default function IncomePageClient({
       </div>
 
       {/* Right: add or edit form */}
-      <div className="w-80 shrink-0 border-l border-gray-100 p-6">
+      <div className="md:w-80 md:shrink-0 border-t md:border-t-0 md:border-l border-gray-100 p-4 md:p-6">
         {editing ? (
           <>
             <div className="flex items-center justify-between mb-4">

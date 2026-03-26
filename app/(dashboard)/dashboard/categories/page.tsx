@@ -39,9 +39,9 @@ export default async function CategoriesPage() {
   const expense = categories?.filter(c => c.type === 'expense') ?? []
 
   return (
-    <div className="flex h-full overflow-hidden">
+    <div className="flex flex-col md:flex-row md:h-full md:overflow-hidden">
       {/* Left: category list */}
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className="flex-1 p-4 md:p-6 md:overflow-y-auto">
         <h1 className="text-lg font-bold text-gray-900 mb-6">Kategorier</h1>
 
         {categories?.length === 0 && (
@@ -74,7 +74,7 @@ export default async function CategoriesPage() {
       </div>
 
       {/* Right: form */}
-      <div className="w-72 shrink-0 border-l border-gray-100 p-6">
+      <div className="md:w-72 md:shrink-0 border-t md:border-t-0 md:border-l border-gray-100 p-4 md:p-6">
         <h2 className="text-sm font-semibold text-gray-900 mb-4">Ny kategori</h2>
         <CategoryForm />
       </div>

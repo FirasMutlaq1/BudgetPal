@@ -158,9 +158,9 @@ export default function DashboardClient({
   const weekLabel = `${monday.getDate()}/${monday.getMonth() + 1} – ${sunday.getDate()}/${sunday.getMonth() + 1}`
 
   return (
-    <div className="flex h-full overflow-hidden">
+    <div className="flex flex-col lg:flex-row lg:h-full lg:overflow-hidden">
       {/* ── Main ── */}
-      <div className="flex-1 flex flex-col overflow-y-auto p-6 min-w-0">
+      <div className="flex-1 flex flex-col p-4 md:p-6 min-w-0">
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
@@ -179,7 +179,7 @@ export default function DashboardClient({
         </div>
 
         {/* Top cards */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           {/* Balance Summary */}
           <div className="bg-gray-50 rounded-2xl p-5">
             <h2 className="text-sm font-semibold text-gray-900 mb-4">Saldo</h2>
@@ -292,7 +292,7 @@ export default function DashboardClient({
       </div>
 
       {/* ── Right panel ── */}
-      <div className="w-60 shrink-0 border-l border-gray-100 flex flex-col gap-6 overflow-y-auto p-5">
+      <div className="lg:w-60 lg:shrink-0 border-t lg:border-t-0 lg:border-l border-gray-100 flex flex-col gap-6 p-4 md:p-5">
 
         {/* Summary card */}
         <div className="bg-gray-900 rounded-2xl p-4 text-white">
