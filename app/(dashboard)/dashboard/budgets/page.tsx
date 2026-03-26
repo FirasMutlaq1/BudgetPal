@@ -34,7 +34,8 @@ export default async function BudgetsPage() {
   // Actual spending per category this month
   const spending: Record<string, number> = {}
   transactions?.forEach(t => {
-    if (t.categories?.type === 'expense' && t.category_id) {
+    const cat = t.categories as { type: string } | null
+    if (cat?.type === 'expense' && t.category_id) {
       spending[t.category_id] = (spending[t.category_id] ?? 0) + Number(t.amount)
     }
   })
